@@ -8,11 +8,15 @@
   ];
   
   function filterUsersByMonth(users2, month) { 
+    let specificUser="";
     users2.forEach(user => {
         let birthday = new Date(user.birthday);
         if (birthday.getMonth() === month) {
-        console.log('Task 11. User with specific month ',user);
+        specificUser=user;
         }
       });
+      return specificUser;
     }
-  filterUsersByMonth(users2, 0) // [{ name: 'Bill', birthday: '1999-1-19' }]
+
+
+  console.log('Task 11. User with specific month ', filterUsersByMonth(users2, 0)); // [{ name: 'Bill', birthday: '1999-1-19' }]

@@ -8,22 +8,16 @@
     { name: 'Luce', birthday: '2000-11-22' }
   ];
 
-  function getAdultNames(users3) {
-    users3.forEach(user => {
-        let birthday = new Date(user.birthday);
-        let minDate = new Date();
-        let ageDate = new Date(user.birthday);
-        let currentDate = new Date();
-        minDate.setFullYear(minDate.getFullYear() - 18);
-        let age = (currentDate.getFullYear() - ageDate.getFullYear());
-        if (birthday < minDate) {
-        console.log('Task 12. Adult users are: ', user.name + ' ' + age);
-        }  
-      });
-     
-   }
- 
-   getAdultNames(users3);  
 
+function getAdultNames(users3) { 
+	let users = [];
+	users3.forEach((user)=>{
+		const adultUsers = new Date().getFullYear() - new Date(user.birthday).getFullYear();
+		if (adultUsers >= 18){
+			users.push(`  ${user.name} ${adultUsers}`);
+		};
+	});
+	return users.join()
+ }
 
-//     getAdultNames(users3) // 'John 19, Luce 18'
+ console.log('Task 12. Adult users are: ', getAdultNames(users3));

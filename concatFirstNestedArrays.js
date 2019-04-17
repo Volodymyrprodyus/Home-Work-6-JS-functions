@@ -7,6 +7,7 @@ function concatFirstNestedArrays(arr) {
         },
         []
       ); 
-      console.log('Task 9. one array is ',flattened);   
+      return flattened;   
 }
-concatFirstNestedArrays([[0, 1], [2, 3], [4, 5]]) // [0, 1, 2, 3, 4, 5]
+// [0, 1, 2, 3, 4, 5]
+console.log('Task 9. one array is ',concatFirstNestedArrays([[0, 1], [2, 3], [4, 5]]));  

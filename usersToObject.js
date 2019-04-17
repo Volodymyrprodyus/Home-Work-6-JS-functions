@@ -13,11 +13,12 @@ const users = [
     users.forEach ((user) =>{
         usersObj[user.id] = user;  
     })
-     console.log('Task 10 ', usersObj);
-    return;
+     
+    return usersObj;
 
     }
-    usersToObject(users);
+
+    console.log('Task 10 ', usersToObject(users));
   // {
   //  1: { id: 1, name: 'John', birthday: '1999-2-12' },
   //  2: { id: 2, name: 'Bill', birthday: '1999-1-19' },

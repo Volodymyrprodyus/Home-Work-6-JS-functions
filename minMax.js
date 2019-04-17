@@ -14,6 +14,9 @@ function minMax(arr) {
 
        object.min = minNumbers;
        object.max = maxNumbers;
-   console.log('Task 7. object ',object);
+   return object;
 }
-minMax([9, 1, 8, 2, 20]) // { max: 20, min: 1 }
+
+
+ 
+console.log('Task 7. object ', minMax([9, 1, 8, 2, 20])); // { max: 20, min: 1 }

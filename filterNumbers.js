@@ -7,7 +7,7 @@ function filterNumbers(arr1, maxNumber) {
     let newArr = arr1.filter(function(number) { // using Callback
         return number < maxNumber;
       });
-      console.log('Task 6. result is ',newArr); 
+     return newArr; 
 }
 
-filterNumbers([1, 4, 8, 1, 20], 5) // [1, 4, 1]
+console.log('Task 6. result is ', filterNumbers([1, 4, 8, 1, 20], 5));
